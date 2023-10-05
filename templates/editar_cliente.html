@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Editar Cliente</title>
+</head>
+<body>
+    <h1>Editar Cliente</h1>
+    <form method="POST" action="/editar_cliente/{{ cliente[0] }}">
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" name="usuario" value="{{ cliente[1] }}" required><br>
+
+        <label for="estatus">Estatus:</label>
+        <select id="estatus" name="estatus">
+            <option value="Activo" {% if cliente[2] == 'Activo' %}selected{% endif %}>Activo</option>
+            <option value="Inactivo" {% if cliente[2] == 'Inactivo' %}selected{% endif %}>Inactivo</option>
+        </select><br>
+
+        <label for="rut">RUT:</label>
+        <input type="text" id="rut" name="rut" value="{{ cliente[3] }}" required><br>
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" value="{{ cliente[4] }}" required><br>
+
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion" value="{{ cliente[5] }}" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" value="{{ cliente[6] }}" required><br>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" value="{{ cliente[7] }}" required><br>
+
+        <label for="tipo_plan">Tipo de Plan:</label>
+        <select id="tipo_plan" name="tipo_plan">
+            <option value="normal" {% if cliente[8] == 'normal' %}selected{% endif %}>Normal</option>
+            <option value="bueno" {% if cliente[8] == 'bueno' %}selected{% endif %}>Bueno</option>
+            <option value="excelente" {% if cliente[8] == 'excelente' %}selected{% endif %}>Excelente</option>
+            <option value="oferta de temporada" {% if cliente[8] == 'oferta de temporada' %}selected{% endif %}>Oferta de Temporada</option>
+        </select><br>
+
+        <label for="tipo_cambio">Tipo de Cambio:</label>
+        <select id="tipo_cambio" name="tipo_cambio">
+            <option value="datos personales actualización" {% if cliente[9] == 'datos personales actualización' %}selected{% endif %}>Datos Personales Actualización</option>
+            <option value="cambio de plan" {% if cliente[9] == 'cambio de plan' %}selected{% endif %}>Cambio de Plan</option>
+        </select><br>
+
+        <input type="submit" value="Guardar Cambios">
+    </form>
+</body>
+</html>
+

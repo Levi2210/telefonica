@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Confirmar Eliminación</title>
+</head>
+<body>
+    <h1>Confirmar Eliminación</h1>
+    <p>¿Estás seguro de que deseas eliminar al siguiente cliente?</p>
+    <p>ID: {{ cliente[0] }}</p>
+    <p>Usuario: {{ cliente[1] }}</p>
+    <p>Estatus: {{ cliente[2] }}</p>
+    <p>RUT: {{ cliente[3] }}</p>
+    <p>Nombre: {{ cliente[4] }}</p>
+    <p>Dirección: {{ cliente[5] }}</p>
+    <p>Email: {{ cliente[6] }}</p>
+    <p>Teléfono: {{ cliente[7] }}</p>
+    <p>Tipo de Plan: {{ cliente[8] }}</p>
+    <p>Tipo de Cambio: {{ cliente[9] }}</p>
+    
+    <form method="POST" action="/eliminar_cliente/{{ cliente[0] }}">
+        <input type="submit" value="Eliminar">
+    </form>
+    
+    <a href="/lista_clientes">Cancelar</a>
+</body>
+</html>
+

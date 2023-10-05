@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Agregar Cliente</title>
+</head>
+<body>
+    <h1>Agregar Cliente</h1>
+    <form method="POST" action="/agregar_cliente">
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" name="usuario" required><br>
+
+        <label for="estatus">Estatus:</label>
+        <select id="estatus" name="estatus">
+            <option value="Activo">Activo</option>
+            <option value="Inactivo">Inactivo</option>
+        </select><br>
+
+        <label for="rut">RUT:</label>
+        <input type="text" id="rut" name="rut" required><br>
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br>
+
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" name="direccion" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br>
+
+        <label for="telefono">Teléfono:</label>
+        <input type="tel" id="telefono" name="telefono" required><br>
+
+        <label for="tipo_plan">Tipo de Plan:</label>
+        <select id="tipo_plan" name="tipo_plan">
+            <option value="normal">Normal</option>
+            <option value="bueno">Bueno</option>
+            <option value="excelente">Excelente</option>
+            <option value="oferta de temporada">Oferta de Temporada</option>
+        </select><br>
+
+        <label for="tipo_cambio">Tipo de Cambio:</label>
+        <select id="tipo_cambio" name="tipo_cambio">
+            <option value="datos personales actualización">Datos Personales Actualización</option>
+            <option value="cambio de plan">Cambio de Plan</option>
+        </select><br>      
+
+        <input type="submit" value="Guardar">
+    </form>
+</body>
+</html>
+

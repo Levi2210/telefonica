@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lista de Clientes</title>
+</head>
+<body>
+    <h1>Lista de Clientes</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Usuario</th>
+            <th>Estatus</th>
+            <th>RUT</th>
+            <th>Nombre</th>
+            <th>Dirección</th>
+            <th>Email</th>
+            <th>Teléfono</th>
+            <th>Tipo de Plan</th>
+            <th>Tipo de Cambio</th>
+            <th>Acciones</th>
+        </tr>
+        {% for cliente in clientes %}
+        <tr>
+            <td>{{ cliente[0] }}</td>
+            <td>{{ cliente[1] }}</td>
+            <td>{{ cliente[2] }}</td>
+            <td>{{ cliente[3] }}</td>
+            <td>{{ cliente[4] }}</td>
+            <td>{{ cliente[5] }}</td>
+            <td>{{ cliente[6] }}</td>
+            <td>{{ cliente[7] }}</td>
+            <td>{{ cliente[8] }}</td>
+            <td>{{ cliente[9] }}</td>
+            <td>
+                <a href="/editar_cliente/{{ cliente[0] }}">Editar</a>
+                <a href="/confirmar_eliminar/{{ cliente[0] }}">Eliminar</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
+
+
